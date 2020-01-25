@@ -12,10 +12,7 @@ SET @CREATEDATE = (select max(local_createDate) FROM OpenPlayUnknown_Sales)
 
 --1
 ----------------------------------------------------------Populate Unknown Sales---------------------------------------------------------
---select top 10 * FROM OpenPlayUnknown_Sales
---select max(local_createDate) FROM OpenPlayUnknown_Sales -- 
 
-----2019-09-30 09:21:16.530
 
 INSERT INTO OpenPlayUnknown_Sales (
 	salesId ,
@@ -117,12 +114,6 @@ INSERT INTO OpenPlayUnknown_Sales (
 			OR sales.DistributorSuppliedCompanyId <> 'MUSART')
 
 
-		-- execute time restarted 11:22Am 9/30/19
-		-- execute time 1:11.  118720 rows
-
---DELETE 
---SELECT DISTINCT local_createDate FROM  DBO.OpenPlayUnknown_Sales WHERE label LIKE '%MUSART%' AND local_createDate > '2019-08-07 08:20:26.193' 
---SELECT top 10* FROM  DBO.OpenPlayUnknown_Sales 
 
 
 
